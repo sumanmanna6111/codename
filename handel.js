@@ -7,7 +7,7 @@ document.getElementById('textInput').addEventListener('input', function() {
         if (value === '' || value > 67) return
         match.push(data.find(({id})=> id === value ).name)
     })
-    document.getElementById('outputText').textContent = match.toString();
+    document.getElementById('outputText').textContent = match.toString().toUpperCase();
 });
 fetch("./dcode.json")
     .then(response => response.json())
