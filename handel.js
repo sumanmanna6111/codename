@@ -14,3 +14,8 @@ fetch("./dcode.json")
     .then(json => {
         data = json
     });
+
+function copy() {
+    navigator.clipboard.writeText(document.getElementById('outputText').textContent);
+
+}
