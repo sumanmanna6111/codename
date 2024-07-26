@@ -1,6 +1,7 @@
 let data;
 document.getElementById('textInput').addEventListener('input', function() {
     let codes = this.value.split('/')
+    codes = [...new Set(codes)]
     let match = []
     codes.forEach(value => {
         value = value.trim()
@@ -16,6 +17,6 @@ fetch("./dcode.json")
     });
 
 function copy() {
-    navigator.clipboard.writeText(document.getElementById('outputText').textContent);
+    navigator.clipboard.writeText(document.getElementById('outputText').textContent).then(value => {});
 
 }
