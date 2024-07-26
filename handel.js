@@ -1,6 +1,6 @@
 let data;
 document.getElementById('textInput').addEventListener('input', function() {
-    let codes = this.value.split(',')
+    let codes = this.value.split('/')
     let match = []
     codes.forEach(value => {
         value = value.trim()
