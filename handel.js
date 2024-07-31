@@ -1,5 +1,11 @@
 let data;
-document.getElementById('textInput').addEventListener('input', function() {
+let input = document.getElementById('textInput');
+input.addEventListener('keypress', event =>{
+    if(event.key === 'Enter'){
+        document.getElementById('copyButton').click();
+    }
+});
+input.addEventListener('input', function() {
     let codes = this.value.split('/')
     codes = [...new Set(codes)]
     let match = []
