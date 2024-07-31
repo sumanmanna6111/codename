@@ -2,7 +2,8 @@ let data;
 let input = document.getElementById('textInput');
 input.addEventListener('keypress', event =>{
     if(event.key === 'Enter'){
-        document.getElementById('copyButton').click();
+        copy();
+        console.log('copied');
     }
 });
 input.addEventListener('input', function() {
